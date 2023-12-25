@@ -1,0 +1,8 @@
+---
+- name: testing_facts_variables
+  hosts: slave
+  gather_facts: true
+  tasks:
+    - name: gathering_localhost_facts
+      debug: 
+        msg: "the localhost dmn name is {{ansible_fqdn}} and v4 addrss is {{ansible_lo.device}}"

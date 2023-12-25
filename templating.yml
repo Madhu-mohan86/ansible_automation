@@ -1,0 +1,12 @@
+---
+- name: nginx_conf
+  hosts: slave
+  become: yes
+  vars:
+    http_port: 80
+    server_name: localhost
+  tasks:
+    - name: copying_template_file
+      template:
+        src: /home/ec2-user/jinga2/nginx_conf.j2
+        dest: /etc/nginx/

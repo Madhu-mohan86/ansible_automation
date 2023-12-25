@@ -1,0 +1,17 @@
+---
+- name: install nginx ( play name )
+  hosts: web
+  become: yes
+  tasks:
+   - name: install nginx ( task name )
+     yum:
+       name: nginx
+       state: latest
+   - name: install node ( task name )
+     yum:
+       name: nodejs
+       state: latest
+   - name: starting nginx (task name)
+     service:
+       name: nginx
+       state: started 

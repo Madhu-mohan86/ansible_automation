@@ -1,0 +1,7 @@
+---
+- name: testing
+  hosts: localhost
+  tasks:
+    - name: print_kernal_release_info
+      debug: var=ansible_facts['kernel']
+

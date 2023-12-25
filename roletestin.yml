@@ -1,0 +1,7 @@
+---
+- name: install nodejs name in playbook
+  hosts: iaasserver
+  become: yes
+  roles: 
+    - sample1
+

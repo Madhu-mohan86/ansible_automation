@@ -1,0 +1,9 @@
+---
+- name: install nginx
+  hosts: iaasserver
+  become: yes
+  tasks: 
+   - name: install nginx
+     yum: 
+       name: nginx  
+

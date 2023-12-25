@@ -1,0 +1,13 @@
+---
+ - name: variable_intro
+   hosts: localhost
+   vars:
+     var1: automation
+     var2: with ansible
+     var3: "{{var1}} {{var2}}"
+   tasks:
+     - name: print_mesg
+       debug:
+         msg: "{{var3}}" 
+  
+

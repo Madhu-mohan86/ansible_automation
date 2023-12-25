@@ -1,0 +1,14 @@
+---
+- name: check_version
+  hosts: web
+  become: yes
+  tasks:
+    - name: check_version_of_nginx
+      yum:
+        name: "{{item}}"
+        state: latest
+      loop:
+        - nginx
+        - nodejs
+
+      

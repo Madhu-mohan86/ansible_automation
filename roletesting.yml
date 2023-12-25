@@ -1,0 +1,7 @@
+---
+- name: role_testing
+  hosts: slave
+  become: yes
+  roles:
+    - /etc/ansible/roles/combined
+

@@ -1,0 +1,15 @@
+---
+- name: condition_with_register
+  hosts: web
+  become: yes
+  tasks:
+    - name: check_installation
+      yum:
+        name: nginx
+        state: latest
+      register: nginx_instlltn
+    - name: start_service
+      service:
+        name: nginx
+        state: restart
+      when: start_service.ok

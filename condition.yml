@@ -1,0 +1,12 @@
+---
+- name: testing_conditions
+  hosts: localhost
+  vars:
+    var1: voldemort_will_be_destroyed
+    var2: if_harrypotter_poised_the_book
+  tasks:
+    - name: printing_mssg
+      debug:
+        msg: "{{var1}}"
+      when: var2 == "if_harrypotter_poised_the_book"
+
