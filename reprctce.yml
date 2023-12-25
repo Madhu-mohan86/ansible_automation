@@ -1,6 +1,8 @@
 ---
 - name: install nginx ( play name )
-  hosts: web
+  hosts: 
+   - web
+   - web1
   become: yes
   tasks:
    - name: install nginx ( task name )
