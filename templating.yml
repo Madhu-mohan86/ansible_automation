@@ -1,6 +1,8 @@
 ---
 - name: nginx_conf
-  hosts: slave
+  hosts: 
+    - web
+    - web1
   become: yes
   vars:
     http_port: 80
